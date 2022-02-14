@@ -1,5 +1,5 @@
 package edu.poniperro.ricksybusiness;
 
 public interface GuestDispatcher {
-    public void dispatcher(CreditCard card);
+    void dispatch(CreditCard card);
 }

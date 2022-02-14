@@ -11,7 +11,31 @@ public class CreditCard {
         this.number = number;
     }
 
-    /* public boolean pay(double credit){
-        this.credit = credit;
-    } */
+    public boolean pay(double credit) {
+        if (this.credit - credit < 0){
+            return false;
+        }
+        this.credit -= credit;
+        return true;
+    }
+
+    public String number(){
+        return this.number;
+    }
+
+    public String cardOwner(){
+        return this.owner;
+    }
+
+    public double credit(){
+        return this.credit;
+    }
+
+    @Override
+    public String toString() {
+            return "owner: " + this.owner
+                    + "\nnumber: " + this.number
+                    + "\ncredit: " + this.credit + this.SYMBOL;
+        }
+
 }
