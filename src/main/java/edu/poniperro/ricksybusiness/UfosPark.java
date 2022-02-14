@@ -15,6 +15,10 @@ public class UfosPark {
         this.flota.put(ovni, null); // Añade ovni a flota sin asignar nada (null)
     }
 
+    public void String fee(){
+        this.fee = fee;
+    }
+
     /*public String getUfoOf(String number) {
     }*/
 
