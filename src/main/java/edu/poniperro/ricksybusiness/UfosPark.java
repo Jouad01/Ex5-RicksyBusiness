@@ -18,7 +18,7 @@ public class UfosPark implements GuestDispatcher {
     public String getUfoOf(String number) {
         String ufoID = null;
         if (this.flota.containsValue(number)) {
-            for (Map.Entry<String, String> entry : this.flota.entrySet()) {
+            for (Map.Entry <String, String> entry : this.flota.entrySet()) {
                 if (entry.getValue() == number) {
                     ufoID = entry.getKey();
                     break;
@@ -28,16 +28,21 @@ public class UfosPark implements GuestDispatcher {
         return ufoID;
     }
 
-
-  /*  public boolean containsCard(String number) {
-    }*/
-
     @Override
     public void dispatch(CreditCard card) {
-
+        if (!containsCard(card.number())){
+            for (String key : flota.keySet()){
+                if (flota.get(key) == null && card.pay(fee)){
+                    flota.replace(key, card.number());
+                    break;
+                }
+            }
+        }
     }
 
-    public boolean containsCard(String number) {
-        return false;
+    // Testing
+
+    public boolean containsCard(String card) {
+        return this.flota.containsValue(card);
     }
 }
