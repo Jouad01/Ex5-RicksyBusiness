@@ -1,4 +1,4 @@
-package edu.poniperro.testRicksy;
+package edu.poniperro.ricksybusiness;
 
 import edu.poniperro.ricksybusiness.CreditCard;
 import edu.poniperro.ricksybusiness.UfosPark;
